@@ -1,0 +1,39 @@
+{
+  "name": "jasmine.moq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build_prepare": "tsc ./build/prepare-npm-publish.ts",
+    "prepare": "node ./build/prepare-npm-publish.js",
+    "buildjs": "tsc index.ts --declaration --target es6 --module commonjs",
+    "build": "npm run build_prepare && npm run prepare && npm run buildjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Testdozer/Jasmine.Moq.git"
+  },
+  "author": "",
+  "keywords": [
+    "BDD",
+    "TDD",
+    "jasmine",
+    "Moq.ts",
+    "testing"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Testdozer/Jasmine.Moq/issues"
+  },
+  "homepage": "https://github.com/Testdozer/Jasmine.Moq#readme",
+  "dependencies": {
+    "add-matchers": "^0.5.0",
+    "moq.ts": "^2.5.1"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.5.47",
+    "@types/glob": "^5.0.30",
+    "glob": "^7.1.1"
+  }
+}
