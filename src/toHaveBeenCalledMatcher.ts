@@ -3,9 +3,9 @@ import { Times } from 'moq.ts';
 import { IExpectedExpression } from 'moq.ts';
 import { MatchResult } from './match.result';
 
-export function moqToHaveBeenCalledMatcher(): any {
+export function moqToHaveBeenCalledMatcher() {
     return {
-        moqToHaveBeenCalled: (util, customEqualityTesters): any => {
+        moqToHaveBeenCalled: (util, customEqualityTesters) => {
             return {
                 compare: (actual: IMock<any>, ...args: any[]): jasmine.CustomMatcherResult => {
                     const expected: IExpectedExpression<any> = args[0];
